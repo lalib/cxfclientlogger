@@ -46,9 +46,6 @@ Usage
 
 There are two usage scenarios.
 
-1. Using a different datasource
-2. Using the same datasource
-
 #####1. Using a different datasource
 
 The configuration class is `com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig`
