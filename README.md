@@ -48,6 +48,7 @@ The configuration class is `com.bilalalp.cxflogger.config.CxfLoggerApplicationCo
 This will use default H2 database. You can give your own database connection informations. Here is the usage:
 
 ```xml
+<context:annotation-config/>
 <bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
     <property name="cxfLoggerConfigurationMap">
         <map>
@@ -63,6 +64,7 @@ This will use default H2 database. You can give your own database connection inf
 You can also give hibernate parameters in the same map. Below configurations are also default parameters. If you don't give any parameters, these parameters will be used. Here is the usage:
 
 ```xml
+<context:annotation-config/>
 <bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
     <property name="cxfLoggerConfigurationMap">
         <map>
@@ -94,3 +96,55 @@ You can also give hibernate parameters in the same map. Below configurations are
     </property>
 </bean>
 ```
+
+#####2. Using the same datasource
+
+If you'd like to use the same datasource, here is the usage:
+
+```xml
+<context:annotation-config/>
+<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
+    <property name="useDatasource" value="true"/>
+    <property name="dataSource" ref="cxfLoggerConsumerDatasource"/>
+</bean>
+```
+
+This will use your datasource directly, If you don't have a table named WsLog, it will be created automaticly.
+
+After Logging configurations, you just need to add interceptors to your bus.
+
+Here is the sample:
+
+```xml
+<bean id="abstractLoggingInterceptor" abstract="true">
+    <property name="prettyLogging" value="true"/>
+</bean>
+
+<bean id="loggingInInterceptor" class="org.apache.cxf.interceptor.LoggingInInterceptor"
+      parent="abstractLoggingInterceptor"/>
+<bean id="loggingOutInterceptor" class="org.apache.cxf.interceptor.LoggingOutInterceptor"
+      parent="abstractLoggingInterceptor"/>
+
+<cxf:bus>
+    <cxf:inInterceptors>
+        <ref bean="loggingInInterceptor"/>
+        <ref bean="wsLoggingInInterceptor"/>
+    </cxf:inInterceptors>
+    <cxf:outInterceptors>
+        <ref bean="loggingOutInterceptor"/>
+        <ref bean="wsLoggingOutInterceptor"/>
+    </cxf:outInterceptors>
+    <cxf:inFaultInterceptors>
+        <ref bean="loggingInInterceptor"/>
+        <ref bean="wsLoggingInInterceptor"/>
+    </cxf:inFaultInterceptors>
+    <cxf:outFaultInterceptors>
+        <ref bean="loggingOutInterceptor"/>
+        <ref bean="wsLoggingOutInterceptor"/>
+    </cxf:outFaultInterceptors>
+</cxf:bus>
+```
+
+This is it. This will store logs in wslog table.
+
+I've used some codes from Bahadır Akın's projects. Thanks to him.
