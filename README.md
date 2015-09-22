@@ -13,6 +13,16 @@ It is your choise.
 
 I've used some codes from  [Bahadır Akın](http://www.bahadirakin.com/) 's projects. Thanks to him.
 
+Maven Dependency
+
+```xml
+<dependency>
+  <groupId>com.bilalalp</groupId>
+  <artifactId>cxfloggerprovider</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+
 Requirements
 --------
 
