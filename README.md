@@ -41,7 +41,9 @@ There are two usage scenarios.
 
 The configuration class is `com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig`
 
-```xml<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig"/>```
+```xml
+<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig"/>
+```
 
 This will use default H2 database. You can give your own database connection informations. Here is the usage:
 
