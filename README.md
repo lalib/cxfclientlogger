@@ -19,7 +19,7 @@ Maven Dependency
 ```xml
 <dependency>
   <groupId>com.bilalalp</groupId>
-  <artifactId>cxfloggerprovider</artifactId>
+  <artifactId>cxfclientlogger</artifactId>
   <version>1.0</version>
 </dependency>
 ```
@@ -158,7 +158,3 @@ Here is the sample:
 ```
 
 This is it. This will store logs in wslog table.
-
-The full example is cxfloggerconsumer project. You can check it out and run it. It uses w3schools test web services.
-
-It has its own xml configurations.
