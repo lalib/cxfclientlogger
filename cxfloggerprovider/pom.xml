@@ -24,8 +24,17 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <developers>
+        <developer>
+            <name>Bilal Alp</name>
+            <email>symen46@gmail.com</email>
+            <organizationUrl>http://www.bilalalp.com</organizationUrl>
+        </developer>
+    </developers>
 
     <scm>
+        <connection>scm:git:https://github.com/lalib/cxfclientlogger.git/</connection>
+        <developerConnection>scm:git:https://github.com/lalib/cxfclientlogger.git</developerConnection>
         <url>https://github.com/lalib/cxfclientlogger.git</url>
     </scm>
 
