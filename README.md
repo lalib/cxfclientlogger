@@ -57,7 +57,8 @@ This will use default H2 database. You can give your own database connection inf
             <entry key="cxflogger.db.jdbc.driverClassName" value="org.postgresql.Driver"/>
         </map>
     </property>
-</bean>```
+</bean>
+```
 
 You can also give hibernate parameters in the same map. Here is the usage:
 
@@ -71,4 +72,5 @@ You can also give hibernate parameters in the same map. Here is the usage:
             <entry key="cxflogger.db.jdbc.driverClassName" value="org.postgresql.Driver"/>
         </map>
     </property>
-</bean>```
+</bean>
+```
