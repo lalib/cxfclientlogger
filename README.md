@@ -45,7 +45,8 @@ The configuration class is `com.bilalalp.cxflogger.config.CxfLoggerApplicationCo
 
 This will use default H2 database. You can give your own database connection informations. Here is the usage:
 
-`<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
+```xml
+<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
     <property name="cxfLoggerConfigurationMap">
         <map>
             <entry key="cxflogger.db.jdbc.url" value="jdbc:postgresql://localhost\:5432/mydb?characterEncoding\=UTF-8"/>
@@ -54,7 +55,7 @@ This will use default H2 database. You can give your own database connection inf
             <entry key="cxflogger.db.jdbc.driverClassName" value="org.postgresql.Driver"/>
         </map>
     </property>
-</bean>`
+</bean>```
 
 You can also give hibernate parameters in the same map. Here is the usage:
 
