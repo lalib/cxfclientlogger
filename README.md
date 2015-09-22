@@ -60,15 +60,35 @@ This will use default H2 database. You can give your own database connection inf
 </bean>
 ```
 
-You can also give hibernate parameters in the same map. Here is the usage:
+You can also give hibernate parameters in the same map. Below configurations are also default parameters. If you don't give any parameters, these parameters will be used. Here is the usage:
 
 ```xml
 <bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
     <property name="cxfLoggerConfigurationMap">
         <map>
-            <entry key="cxflogger.db.jdbc.url" value="jdbc:postgresql://localhost\:5432/mydb?characterEncoding\=UTF-8"/>
+            <entry key="cxflogger.db.jdbc.url" value="jdbc:h2:~/h2CxfLoggerDb;AUTO_SERVER\=TRUE"/>
             <entry key="cxflogger.db.jdbc.userName" value="postgres"/>
             <entry key="cxflogger.db.jdbc.password" value="root"/>
+            <entry key="cxflogger.db.jdbc.driverClassName" value="200"/>
+            <entry key="cxflogger.db.pool.maxPoolSize" value="org.postgresql.Driver"/>
+            <entry key="cxflogger.db.pool.initialPoolSize" value="50"/>
+            <entry key="cxflogger.db.pool.minPoolSize" value="50"/>
+            <entry key="cxflogger.db.pool.incrementSize" value="2"/>
+            <entry key="cxflogger.db.pool.connectionTestPeriod" value="3600"/>
+            <entry key="cxflogger.db.pool.maxIdleTime" value="21600"/>
+            <entry key="cxflogger.db.pool.unreturnedTimeout" value="3600"/>
+            <entry key="cxflogger.db.pool.autoCommit" value="false"/>
+            <entry key="cxflogger.db.pool.numHelperThreads" value="6"/>
+            <entry key="cxflogger.db.pool.maxStatements" value="0"/>
+            <entry key="cxflogger.db.pool.maxStatementsPerConnection" value="0"/>
+            <entry key="cxflogger.db.pool.debugUnreturnedConnectionStackTraces" value="false"/>
+            <entry key="cxflogger.hibernate.hbm2ddl.auto" value="update"/>
+            <entry key="cxflogger.hibernate.showSql" value="false"/>
+            <entry key="cxflogger.hibernate.formatSql" value="false"/>
+            <entry key="cxflogger.hibernate.generate_statistics" value="false"/>
+            <entry key="cxflogger.hibernate.max_fetch_depth" value="3"/>
+            <entry key="cxflogger.hibernate.default_batch_fetch_size" value="16"/>
+            <entry key="cxflogger.hibernate.jdbc.batch_size" value="20"/>
             <entry key="cxflogger.db.jdbc.driverClassName" value="org.postgresql.Driver"/>
         </map>
     </property>
