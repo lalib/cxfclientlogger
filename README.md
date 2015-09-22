@@ -12,6 +12,9 @@ This project gets done whole dirty jobs instead of you.
 Our interceptors will get the job done. Web service logs will be saved to the database whether in your database or in another database. 
 It is your choise.
 
+
+I've used some codes from  [Bahadır Akın](http://www.bahadirakin.com/) 's projects. Thanks to him.
+
 Requirements
 --------
 
@@ -150,5 +153,3 @@ This is it. This will store logs in wslog table.
 The full example is cxfloggerconsumer project. You can check it out and run it. It uses w3schools test web services.
 
 It has its own xml configurations.
-
-I've used some codes from Bahadır Akın's projects. Thanks to him.
