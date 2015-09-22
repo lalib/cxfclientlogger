@@ -19,4 +19,4 @@ Requirements
 | Maven     | 3+      |
 | Spring    | 4.2+    |
 | Cxf       | 3.1+    |
-| Hibernate |         |
+| Hibernate | 5+      |
