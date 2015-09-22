@@ -27,7 +27,7 @@ Requirements
 Build
 --------
 
-To build the project, run mvn clean install, this will put jar file in `cxfloggerprovider/target/cxfloggerprovider-1.0.jar`
+To build the project, run mvn clean install, this will put jar file in `cxfloggerprovider/target/cxfloggerprovider-1.0.jar
 
 Usage
 --------
@@ -41,7 +41,7 @@ There are two usage scenarios.
 
 The configuration class is `com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig`
 
-<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig"/>`
+`<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig"/>`
 
 This will use default H2 database. You can give your own database connection informations. Here is the usage:
 
@@ -57,9 +57,7 @@ This will use default H2 database. You can give your own database connection inf
     </property>
 </bean>```
 
-
 You can also give hibernate parameters in the same map. Here is the usage:
-
 
 ```xml
 <bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
