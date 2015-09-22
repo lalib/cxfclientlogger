@@ -19,7 +19,7 @@ Maven Dependency
 ```xml
 <dependency>
   <groupId>com.bilalalp</groupId>
-  <artifactId>cxflogger</artifactId>
+  <artifactId>cxfclientlogger</artifactId>
   <version>1.0</version>
 </dependency>
 ```
