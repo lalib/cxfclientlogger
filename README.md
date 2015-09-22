@@ -158,7 +158,3 @@ Here is the sample:
 ```
 
 This is it. This will store logs in wslog table.
-
-The full example is cxfloggerconsumer project. You can check it out and run it. It uses w3schools test web services.
-
-It has its own xml configurations.
