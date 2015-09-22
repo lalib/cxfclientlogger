@@ -58,7 +58,8 @@ This will use default H2 database. You can give your own database connection inf
 
 You can also give hibernate parameters in the same map. Here is the usage:
 
-`<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
+```xml
+<bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
     <property name="cxfLoggerConfigurationMap">
         <map>
             <entry key="cxflogger.db.jdbc.url" value="jdbc:postgresql://localhost\:5432/mydb?characterEncoding\=UTF-8"/>
@@ -67,4 +68,4 @@ You can also give hibernate parameters in the same map. Here is the usage:
             <entry key="cxflogger.db.jdbc.driverClassName" value="org.postgresql.Driver"/>
         </map>
     </property>
-</bean>`
+</bean>```
