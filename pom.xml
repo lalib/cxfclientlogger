@@ -9,22 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Cxf Client Logger</name>
-    <url>https://github.com/lalib/cxfclientlogger/</url>
-    <description>Cxf Client Logger Project</description>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <scm>
-        <url>https://github.com/lalib/cxfclientlogger.git</url>
-    </scm>
-
     <properties>
 
         <generated-java-source>src/gen/java</generated-java-source>
