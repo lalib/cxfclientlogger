@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+
     <properties>
 
         <generated-java-source>src/gen/java</generated-java-source>
