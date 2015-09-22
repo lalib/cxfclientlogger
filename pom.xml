@@ -16,7 +16,6 @@
 
         <cxf.version>3.1.2</cxf.version>
         <spring.version>4.2.1.RELEASE</spring.version>
-        <spring.data.jpa.version>1.9.0.RELEASE</spring.data.jpa.version>
 
         <hibernate.version>5.0.1.Final</hibernate.version>
         <c3p0.version>0.9.5.1</c3p0.version>
