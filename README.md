@@ -57,7 +57,9 @@ This will use default H2 database. You can give your own database connection inf
     </property>
 </bean>```
 
+
 You can also give hibernate parameters in the same map. Here is the usage:
+
 
 ```xml
 <bean id="cxfLoggerConfig" class="com.bilalalp.cxflogger.config.CxfLoggerApplicationConfig">
