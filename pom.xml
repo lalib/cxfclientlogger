@@ -39,8 +39,16 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <maven.compiler.version>3.3</maven.compiler.version>
+
         <maven.build.helper.version>1.9.1</maven.build.helper.version>
         <maven.processor.version>2.2.4</maven.processor.version>
+        <maven.nexus.staging.plugin>1.6.3</maven.nexus.staging.plugin>
+        <maven.gpg.plugin>1.5</maven.gpg.plugin>
+        <maven.javadoc.plugin>2.9.1</maven.javadoc.plugin>
+        <maven.source.plugin>2.2.1</maven.source.plugin>
+        <maven.compiler.plugin>3.2</maven.compiler.plugin>
+        <maven.release.plugin>2.5.2</maven.release.plugin>
+        <maven.resources.plugin>2.7</maven.resources.plugin>
     </properties>
 
     <modules>
