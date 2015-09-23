@@ -11,7 +11,7 @@ Our interceptors will get the job done. Web service logs will be saved to the da
 It is your choise.
 
 
-Thanks for helping [Bahadır Akın](http://www.bahadirakin.com/).
+Thanks for supporting [Bahadır Akın](http://www.bahadirakin.com/).
 
 Maven Dependency
 --------
