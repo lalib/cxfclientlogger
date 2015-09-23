@@ -39,7 +39,7 @@ Requirements
 Build
 --------
 
-To build the project, run mvn clean install, this will put jar file in `cxfloggerprovider/target/cxfloggerprovider-1.0.jar
+To build the project, run mvn clean install, this will put jar file in `cxfloggerprovider/target/cxfloggerprovider-1.0.jar`
 
 Usage
 --------
