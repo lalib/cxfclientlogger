@@ -1,6 +1,6 @@
 package com.bilalalp.cxflogger.constant;
 
-public class CxfLoggerConstant {
+public final class CxfLoggerConstant {
 
     public static final String UTF8_ENCODING = "UTF-8";
     public static final String EXHANGE_KEY = "wsLog";

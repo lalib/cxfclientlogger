@@ -11,6 +11,8 @@ import java.util.Map;
 
 public class WsLogDto implements Serializable {
 
+    private static final String EMPTY_STRING = "";
+
     private transient Map<String, Object> parameters;
 
     public WsLogDto() {
@@ -19,10 +21,10 @@ public class WsLogDto implements Serializable {
 
     public Object put(final String key, final Collection<Object> collection) {
         if (collection == null || collection.isEmpty()) {
-            return parameters.put(key, "");
+            return parameters.put(key, EMPTY_STRING);
         } else if (collection.size() == 1) {
             final Object object = collection.iterator().next();
-            return parameters.put(key, (object == null) ? "" : object);
+            return parameters.put(key, (object == null) ? EMPTY_STRING : object);
         } else {
             return parameters.put(key, collection);
         }
@@ -48,9 +50,8 @@ public class WsLogDto implements Serializable {
 
         if (encoding == null) {
             return CxfLoggerConstant.UTF8_ENCODING;
-        } else {
-            return String.valueOf(encoding);
         }
+        return String.valueOf(encoding);
     }
 
     public String getRequest() {
@@ -82,14 +83,12 @@ public class WsLogDto implements Serializable {
     }
 
     public String getSoapAction() {
-
         final Map<String, Object> headerInformationMap = (Map<String, Object>) this.parameters.get(CxfLoggerConstant.HEADER_INFORMATIONS_PARAM);
-
-        if (MapUtils.isNotEmpty(headerInformationMap)) {
-            final List<String> stringList = (List<String>) headerInformationMap.get(CxfLoggerConstant.SOAP_ACTION_PARAM);
-            return stringList.get(0);
+        if (MapUtils.isEmpty(headerInformationMap)) {
+            return null;
         }
-        return null;
+        final List<String> stringList = (List<String>) headerInformationMap.get(CxfLoggerConstant.SOAP_ACTION_PARAM);
+        return stringList.get(0);
     }
 
     public Map<String, Object> getHeaderInformations() {
