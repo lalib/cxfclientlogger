@@ -85,15 +85,14 @@ public abstract class AbstractLoggingInterceptor extends AbstractInDatabindingIn
 
     public Map<String, Object> getHeaderInformations(final Message message) {
         final Map<String, Object> objectMap = new HashMap<>();
-
         final Object protocolHeaders = message.get(Message.PROTOCOL_HEADERS);
+
         if (protocolHeaders != null) {
             final Map<String, Object> protocolHeaderMap = (Map<String, Object>) protocolHeaders;
             for (final Map.Entry<String, Object> entry : protocolHeaderMap.entrySet()) {
                 objectMap.put(entry.getKey(), entry.getValue());
             }
         }
-
         return objectMap;
     }
 }

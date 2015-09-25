@@ -1,21 +1,18 @@
 package com.bilalalp.cxflogger.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-@Getter
-@Setter
 @Entity
 @Table(name = WsLog.TABLE_NAME)
 @Access(AccessType.FIELD)
+@Data
 public class WsLog implements Serializable {
 
     public static final String TABLE_NAME = "WSLOG";
-
     private static final String SEQUENCE_NAME = TABLE_NAME + "_SEQ";
     private static final String SEQUENCE_GENERATOR_NAME = "CAS_SEQUENCE_GENERATOR";
 
@@ -54,4 +51,6 @@ public class WsLog implements Serializable {
     @Column(name = "C_RECORD_DATE")
     @Temporal(TemporalType.TIMESTAMP)
     private Date recordDate;
+
+
 }

@@ -75,12 +75,10 @@ public class CxfLoggerApplicationConfig {
         if (useDatasource) {
             if (dataSource == null) {
                 throw new NoDataSourceException("DataSource must be given!");
-            } else {
-                return dataSource;
             }
-        } else {
-            return getDataSource();
+            return dataSource;
         }
+        return getDataSource();
     }
 
     private DataSource getDataSource() throws PropertyVetoException {

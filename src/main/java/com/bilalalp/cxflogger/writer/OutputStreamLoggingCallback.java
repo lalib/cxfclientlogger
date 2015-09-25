@@ -37,8 +37,7 @@ public class OutputStreamLoggingCallback implements CachedOutputStreamCallback {
 
     @Override
     public void onFlush(CachedOutputStream os) {
-
-        /** This method is not implemented yet.*/
+        throw new RuntimeException("This method is not implemented yet.");
     }
 
     protected boolean writePayload(StringBuilder builder, CachedOutputStream cos, String encoding) {
