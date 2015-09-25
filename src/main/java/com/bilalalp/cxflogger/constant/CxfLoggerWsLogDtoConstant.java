@@ -1,6 +1,6 @@
 package com.bilalalp.cxflogger.constant;
 
-public final class CxfLoggerConstant {
+public final class CxfLoggerWsLogDtoConstant {
 
     public static final String UTF8_ENCODING = "UTF-8";
     public static final String EXHANGE_KEY = "wsLog";
@@ -14,7 +14,7 @@ public final class CxfLoggerConstant {
     public static final String FAULT_PARAM = "fault";
     public static final String SOAP_ACTION_PARAM = "SOAPAction";
 
-    private CxfLoggerConstant() {
+    private CxfLoggerWsLogDtoConstant() {
 
     }
 }

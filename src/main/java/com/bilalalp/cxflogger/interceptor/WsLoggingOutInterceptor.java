@@ -1,6 +1,6 @@
 package com.bilalalp.cxflogger.interceptor;
 
-import com.bilalalp.cxflogger.constant.CxfLoggerConstant;
+import com.bilalalp.cxflogger.constant.CxfLoggerWsLogDtoConstant;
 import com.bilalalp.cxflogger.dto.MessageWrapper;
 import com.bilalalp.cxflogger.dto.WsLogDto;
 import com.bilalalp.cxflogger.writer.OutputLogWriter;
@@ -40,7 +40,7 @@ public class WsLoggingOutInterceptor extends AbstractLoggingInterceptor {
         final Map<String, Object> headerInformations = getHeaderInformations(message);
         final WsLogDto wsLogDto = messageWrapper.getWsLogDto();
 
-        wsLogDto.put(CxfLoggerConstant.HEADER_INFORMATIONS_PARAM, headerInformations);
+        wsLogDto.put(CxfLoggerWsLogDtoConstant.HEADER_INFORMATIONS_PARAM, headerInformations);
         wsLogDto.setMethod(message.get(Message.HTTP_REQUEST_METHOD));
         wsLogDto.setRequestUrl(this.getFullRequestUri(message));
     }

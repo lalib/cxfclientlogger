@@ -1,6 +1,6 @@
 package com.bilalalp.cxflogger.dto;
 
-import com.bilalalp.cxflogger.constant.CxfLoggerConstant;
+import com.bilalalp.cxflogger.constant.CxfLoggerWsLogDtoConstant;
 import org.apache.commons.collections.MapUtils;
 
 import java.io.Serializable;
@@ -38,68 +38,68 @@ public class WsLogDto implements Serializable {
     }
 
     public void setRequestUrl(final String requestUrl) {
-        this.put(CxfLoggerConstant.REQUEST_URL_PARAM, requestUrl);
+        this.put(CxfLoggerWsLogDtoConstant.REQUEST_URL_PARAM, requestUrl);
     }
 
     public void setMethod(final Object method) {
-        this.put(CxfLoggerConstant.METHOD_PARAM, method);
+        this.put(CxfLoggerWsLogDtoConstant.METHOD_PARAM, method);
     }
 
     public String getEncoding() {
-        final Object encoding = this.parameters.get(CxfLoggerConstant.ENCODING_PARAM);
+        final Object encoding = this.parameters.get(CxfLoggerWsLogDtoConstant.ENCODING_PARAM);
 
         if (encoding == null) {
-            return CxfLoggerConstant.UTF8_ENCODING;
+            return CxfLoggerWsLogDtoConstant.UTF8_ENCODING;
         }
         return String.valueOf(encoding);
     }
 
     public String getRequest() {
-        return String.valueOf(this.parameters.get(CxfLoggerConstant.REQUEST_PARAM));
+        return String.valueOf(this.parameters.get(CxfLoggerWsLogDtoConstant.REQUEST_PARAM));
     }
 
     public void setRequest(final String request) {
-        this.put(CxfLoggerConstant.REQUEST_PARAM, request);
+        this.put(CxfLoggerWsLogDtoConstant.REQUEST_PARAM, request);
     }
 
     public String getResponse() {
-        return String.valueOf(this.parameters.get(CxfLoggerConstant.RESPONSE_PARAM));
+        return String.valueOf(this.parameters.get(CxfLoggerWsLogDtoConstant.RESPONSE_PARAM));
     }
 
     public void setResponse(final String response) {
-        this.put(CxfLoggerConstant.RESPONSE_PARAM, response);
+        this.put(CxfLoggerWsLogDtoConstant.RESPONSE_PARAM, response);
     }
 
     public String getRequestURL() {
-        return String.valueOf(this.parameters.get(CxfLoggerConstant.REQUEST_URL_PARAM));
+        return String.valueOf(this.parameters.get(CxfLoggerWsLogDtoConstant.REQUEST_URL_PARAM));
     }
 
     public String getResponseCode() {
-        return String.valueOf(this.parameters.get(CxfLoggerConstant.RESPONSE_CODE_PARAM));
+        return String.valueOf(this.parameters.get(CxfLoggerWsLogDtoConstant.RESPONSE_CODE_PARAM));
     }
 
     public void setResponseCode(final Object responseCode) {
-        this.put(CxfLoggerConstant.RESPONSE_CODE_PARAM, responseCode);
+        this.put(CxfLoggerWsLogDtoConstant.RESPONSE_CODE_PARAM, responseCode);
     }
 
     public String getSoapAction() {
-        final Map<String, Object> headerInformationMap = (Map<String, Object>) this.parameters.get(CxfLoggerConstant.HEADER_INFORMATIONS_PARAM);
+        final Map<String, Object> headerInformationMap = (Map<String, Object>) this.parameters.get(CxfLoggerWsLogDtoConstant.HEADER_INFORMATIONS_PARAM);
         if (MapUtils.isEmpty(headerInformationMap)) {
             return null;
         }
-        final List<String> stringList = (List<String>) headerInformationMap.get(CxfLoggerConstant.SOAP_ACTION_PARAM);
+        final List<String> stringList = (List<String>) headerInformationMap.get(CxfLoggerWsLogDtoConstant.SOAP_ACTION_PARAM);
         return stringList.get(0);
     }
 
     public Map<String, Object> getHeaderInformations() {
-        return (Map<String, Object>) this.parameters.get(CxfLoggerConstant.HEADER_INFORMATIONS_PARAM);
+        return (Map<String, Object>) this.parameters.get(CxfLoggerWsLogDtoConstant.HEADER_INFORMATIONS_PARAM);
     }
 
     public Boolean getFault() {
-        return (Boolean) this.parameters.get(CxfLoggerConstant.FAULT_PARAM);
+        return (Boolean) this.parameters.get(CxfLoggerWsLogDtoConstant.FAULT_PARAM);
     }
 
     public void setFault(final boolean fault) {
-        this.put(CxfLoggerConstant.FAULT_PARAM, fault);
+        this.put(CxfLoggerWsLogDtoConstant.FAULT_PARAM, fault);
     }
 }

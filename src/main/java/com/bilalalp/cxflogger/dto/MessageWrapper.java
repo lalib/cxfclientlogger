@@ -1,6 +1,6 @@
 package com.bilalalp.cxflogger.dto;
 
-import com.bilalalp.cxflogger.constant.CxfLoggerConstant;
+import com.bilalalp.cxflogger.constant.CxfLoggerWsLogDtoConstant;
 import org.apache.cxf.message.Exchange;
 import org.apache.cxf.message.Message;
 
@@ -21,11 +21,11 @@ public class MessageWrapper {
     }
 
     public void setWsLog(final WsLogDto wsLogDto) {
-        getExchange().put(CxfLoggerConstant.EXHANGE_KEY, wsLogDto);
+        getExchange().put(CxfLoggerWsLogDtoConstant.EXHANGE_KEY, wsLogDto);
     }
 
     public Object getWsLogFromMessage() {
-        return getExchange().get(CxfLoggerConstant.EXHANGE_KEY);
+        return getExchange().get(CxfLoggerWsLogDtoConstant.EXHANGE_KEY);
     }
 
     public Exchange getExchange() {
@@ -46,7 +46,7 @@ public class MessageWrapper {
         final Object object = message.get(Message.ENCODING);
 
         if (object == null) {
-            return CxfLoggerConstant.UTF8_ENCODING;
+            return CxfLoggerWsLogDtoConstant.UTF8_ENCODING;
         }
 
         return (String) object;
